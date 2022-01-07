@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:state_manage_demo/helloword.dart';
 import 'package:state_manage_demo/mobx/first_mobx_vc.dart';
 import 'package:state_manage_demo/provider/first_provider_vc.dart';
+import 'package:state_manage_demo/provider/model/providercounter.dart';
 
 class HomeVC extends StatelessWidget {
   const HomeVC({Key? key}) : super(key: key);
@@ -41,7 +43,10 @@ class HomeVC extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) {
-                            return const FirstProviderVC();
+                            return ChangeNotifierProvider(
+                              create: (context) => ProviderCounter(2),
+                              child: const FirstProviderVC(),
+                            );
                           }),
                         )
                       },
