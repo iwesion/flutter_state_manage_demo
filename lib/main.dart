@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:state_manage_demo/home.dart';
 import 'package:state_manage_demo/mobx/first_mobx_vc.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: FirstMobxVC(),
+      home: HomeVC(),
     );
   }
 }

@@ -50,16 +50,6 @@ class FirstMobxVC extends StatelessWidget {
                     );
                   },
                   child: const Text("下一页")),
-              TextButton(
-                  onPressed: () => {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) {
-                            return const HelloWordPage();
-                          }),
-                        )
-                      },
-                  child: const Text("用setState方法")),
             ],
           ),
         ));
